@@ -82,7 +82,12 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@master
+        with:
+          message: 'Mensaje de prueba, todo al 100'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@master
         if: failure()
         with:
-          message: 'Example of message !'
+          message: 'Valio vrg el linting carnalito!'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
