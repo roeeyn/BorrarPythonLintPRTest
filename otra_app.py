@@ -1,7 +1,9 @@
-import datetime
 
 print("hola soy pedrito")
-for i in range(9):
+def cosa_func():
+    """Return a random shit"""
     cosa = 2
-
-    print(f"Hola soy modificado { cosa + i }")
+    for i in range(9):
+        cosa = cosa + 1
+        print(f"Hola soy modificado { cosa + i }")
+    return cosa
